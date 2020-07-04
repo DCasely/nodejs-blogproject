@@ -22,7 +22,12 @@
 button {
   margin: 0.25rem 0;
   background-color: black;
-  color: white;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
 }
 
 .footer {
