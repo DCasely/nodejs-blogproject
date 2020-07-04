@@ -4,8 +4,8 @@
 <p><%= homeStartingContent %></p>
 
 <% posts.map(post => { %>
-<h3><%=post.title %></h3>
-<p><%=post.content %></p>
+<h3><%= post.title %></h3>
+<p><%= `${post.content.slice(0, 100)}...` %></p>
 <% }) %>
 
 <!-- FOOTER PARTIAL -->

@@ -10,9 +10,11 @@
   margin-bottom: 0;
   font-size: 12px;
   letter-spacing: 5px;
+  background-color: #000;
 }
+
 .navbar-nav li a:hover {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .footer-padding {
@@ -34,6 +36,9 @@ button:active {
 
 .footer {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   bottom: 0;
   width: 100%;
