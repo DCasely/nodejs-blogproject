@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+const _ = require('lodash');
 
 const app = express();
 const port = 3000;
@@ -76,10 +77,11 @@ app.post('/compose', (req, res) => {
 // ========================================
 
 app.get('/posts/:title', (req, res) => {
-  const title = req.params.title.toLowerCase();
+  const title = _.lowerCase(req.params.title);
 
   posts.map((post) => {
-    const storedTitle = post.title.toLowerCase();
+    const storedTitle = _.lowerCase(post.title);
+
     if (storedTitle === title) {
       console.log('Match Found');
     }
