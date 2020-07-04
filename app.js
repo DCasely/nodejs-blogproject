@@ -33,6 +33,18 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/about', (req, res) => {
+  res.render('about', {
+    aboutContent: aboutContent,
+  });
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact', {
+    contactContent: contactContent,
+  });
+});
+
 app.listen(port, function () {
   console.log(`Server started on port ${port}`);
 });
