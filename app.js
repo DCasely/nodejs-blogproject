@@ -38,6 +38,8 @@ app.get('/', (req, res) => {
     homeStartingContent: homeStartingContent,
     posts: posts,
   });
+
+  posts.map((post) => console.log(post.title));
 });
 
 app.get('/about', (req, res) => {
@@ -69,6 +71,14 @@ app.post('/compose', (req, res) => {
   posts.push(post);
 
   res.redirect('/');
+});
+
+// ========================================
+// ROUTING PARAMETERS
+// ========================================
+
+app.get('/posts/:title', (req, res) => {
+  console.log(req.params.title);
 });
 
 // ========================================
