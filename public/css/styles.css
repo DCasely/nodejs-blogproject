@@ -19,6 +19,12 @@
   padding-bottom: 60px;
 }
 
+button {
+  margin: 0.25rem 0;
+  background-color: black;
+  color: white;
+}
+
 .footer {
   position: absolute;
   text-align: center;
