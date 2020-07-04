@@ -45,9 +45,22 @@ app.get('/contact', (req, res) => {
   });
 });
 
+// ========================================
+// COMPOSE PAGE
+// ========================================
+
 app.get('/compose', (req, res) => {
   res.render('compose');
 });
+
+app.post('/compose', (req, res) => {
+  const composeText = req.body.compose;
+  console.log(composeText);
+});
+
+// ========================================
+// APP LISTEN
+// ========================================
 
 app.listen(port, function () {
   console.log(`Server started on port ${port}`);
