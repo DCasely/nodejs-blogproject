@@ -45,6 +45,10 @@ app.get('/contact', (req, res) => {
   });
 });
 
+app.get('/compose', (req, res) => {
+  res.render('compose');
+});
+
 app.listen(port, function () {
   console.log(`Server started on port ${port}`);
 });
