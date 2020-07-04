@@ -28,7 +28,9 @@ const contactContent =
 // ========================================
 
 app.get('/', (req, res) => {
-  res.render('home', { homeStartingContent: homeStartingContent });
+  res.render('home', {
+    homeStartingContent: homeStartingContent,
+  });
 });
 
 app.listen(port, function () {
