@@ -38,8 +38,6 @@ app.get('/', (req, res) => {
     homeStartingContent: homeStartingContent,
     posts: posts,
   });
-
-  posts.map((post) => console.log(post.title));
 });
 
 app.get('/about', (req, res) => {
@@ -78,7 +76,14 @@ app.post('/compose', (req, res) => {
 // ========================================
 
 app.get('/posts/:title', (req, res) => {
-  console.log(req.params.title);
+  const title = req.params.title.toLowerCase();
+
+  posts.map((post) => {
+    const storedTitle = post.title.toLowerCase();
+    if (storedTitle === title) {
+      console.log('Match Found');
+    }
+  });
 });
 
 // ========================================
