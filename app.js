@@ -13,6 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // ========================================
+// GLOBAL VARIABLES
+// ========================================
+
+const posts = [];
+
+// ========================================
 // STARTING CONTENT
 // ========================================
 
@@ -30,6 +36,7 @@ const contactContent =
 app.get('/', (req, res) => {
   res.render('home', {
     homeStartingContent: homeStartingContent,
+    posts: posts,
   });
 });
 
@@ -54,13 +61,14 @@ app.get('/compose', (req, res) => {
 });
 
 app.post('/compose', (req, res) => {
-  const postTitle = req.body.postTitle;
-  const postBody = req.body.postBody;
   const post = {
-    title: postTitle,
-    body: postBody,
+    title: req.body.postTitle,
+    content: req.body.postBody,
   };
-  console.log(post);
+
+  posts.push(post);
+
+  res.redirect('/');
 });
 
 // ========================================
