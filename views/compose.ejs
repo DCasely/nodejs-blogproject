@@ -2,13 +2,15 @@
 <h1>Compose</h1>
 
 <form action="/compose" method="post">
+  <!-- TITLE -->
   <div class="form-group">
     <label for="title">Title</label>
-    <input id="title" class="form-control" type="text" name="composeText" />
+    <input id="title" class="form-control" type="text" name="postTitle" />
   </div>
+  <!-- POST -->
   <div class="form-group">
     <label for="post">Post</label>
-    <textarea id="post" class="form-control" name="post"></textarea>
+    <textarea id="post" class="form-control" name="postBody"></textarea>
   </div>
   <button type="submit">Publish</button>
 </form>
